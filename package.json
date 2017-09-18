@@ -1,0 +1,29 @@
+{
+  "name": "auto-tag",
+  "version": "1.0.0",
+  "description": "A web app that allows you to input an image and will return you with a list of tags.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simplenclean/hratx29-mvp.git"
+  },
+  "keywords": [
+    "image",
+    "tags",
+    "deep",
+    "learning",
+    "clarifai",
+    "social",
+    "media",
+    "photos"
+  ],
+  "author": "Charlie Wilhite",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/simplenclean/hratx29-mvp/issues"
+  },
+  "homepage": "https://github.com/simplenclean/hratx29-mvp#readme"
+}
