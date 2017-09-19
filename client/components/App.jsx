@@ -15,7 +15,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.getTags('https://tinyurl.com/ycoga8mj');
+    this.getTags('https://tinyurl.com/ybjjhzxr');
   }
 
   getTags(query) {
@@ -30,7 +30,10 @@ class App extends React.Component {
   render() {
     return (
       <div className="main">
-        <h1 className='heading'>Auto Tag</h1>
+        <h1 className='heading'>
+        <img className="logo" src={`${'https://tinyurl.com/y8bgbhqm'}`} height="40px" width="40px" />
+          Auto Tag
+        </h1>
         <Predict handlePredictInputChange={this.getTags.bind(this)}/>
         <ImageBox image={this.state.currentImg}/>
         <Tags tags={this.state.tags}/>

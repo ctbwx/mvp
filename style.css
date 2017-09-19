@@ -1,5 +1,9 @@
 .heading {
   margin: auto;
+  font-family: 'Allan', Helvetica, Arial, sans-serif;
+	font-size: 70px;
+  text-shadow: 2px 2px #DAC9E8;
+	line-height: 65px;
   text-align: center;
   width: 50%;
   padding: 10px;
@@ -7,6 +11,7 @@
 
 .input {
   margin: auto;
+  font-family: Helvetica;
   text-align: center;
   width: 50%;
   padding: 10px;
@@ -14,6 +19,7 @@
 
 .tagList {
   margin: auto;
+  font-family: Helvetica;
   text-align: center;
   width: 50%;
   padding: 10px;
