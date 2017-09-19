@@ -1,7 +1,8 @@
 const Clarifai = require('clarifai');
+const Key = require('../config/key.js')
 
 const app = new Clarifai.App({
-  apiKey: 'ca00c83193da4e7cb40223f56123f9e2'
+  apiKey: Key.API
 });
 
 export const predict = (query) => {

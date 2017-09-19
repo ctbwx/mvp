@@ -1,18 +1,42 @@
 import React from 'react';
-import * as Data from '../../api/tags.js';
+import ImageBox from './ImageBox.jsx';
+import Predict from './Predict.jsx';
+import Tags from './Tags.jsx';
+import * as Clarifai from '../api/predict.js';
 
 class App extends React.Component {
   constructor() {
     super();
+
+    this.state =  {
+      tags: [],
+      currentImg: null
+    };
+  }
+
+  componentDidMount() {
+    this.getTags('https://tinyurl.com/ycoga8mj');
+  }
+
+  getTags(query) {
+    Clarifai.predict(query).then(results => {
+      this.setState({
+        tags: results.outputs[0].data.concepts.map(i => i.name).splice(0, 10),
+        currentImg: query
+      })
+    });
   }
 
   render() {
     return (
-      <h1 className='heading'>Auto Tag</h1>
+      <div className="main">
+        <h1 className='heading'>Auto Tag</h1>
+        <Predict handlePredictInputChange={this.getTags.bind(this)}/>
+        <ImageBox image={this.state.currentImg}/>
+        <Tags tags={this.state.tags}/>
+      </div>
     );
   }
 }
-
-Data.predictions('https://tinyurl.com/k9onln7').then(tags => console.log(tags))
 
 export default App;
