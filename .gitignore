@@ -6,6 +6,7 @@ logs
 
 # API Keys
 client/config/key.js
+AutoTag.pem
 
 # Runtime data
 pids
